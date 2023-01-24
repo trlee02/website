@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    font-family: "Montserrat";
+}
+
+body {
+    background: #f1f1f1
+    
+}
+
+:root{
+    --main-color: #d8d8f6;
+    --secondary-coor: #404040
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+section {
+    padding: 5%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 125%;
+    padding: 1rem 0rem;
+    font-family: "Montserrat";
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav .links {
+    margin-top: 1rem;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 6rem;
+}
+
+.logo h3 {
+    display: flex;
+    margin-left: 0.5rem;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.25rem;
+    font-family: "Montserrat";
+}
+
+.front-page {
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    color: rgba(0, 0, 0, 0.781)
+}
+
+.intro {
+    margin-top: 25vh;
+}
+
+.headshot {
+    position: relative;
+}
+
+.ctas {
+    margin-top: 2rem;
+}
+
+.ctas button {
+    background-color: var(--main-color);
+    color: var(--secondary-coor);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.185);
+    margin: 1rem;
+}
+
+.cta-proj {
+    background-color: var(--main-color);
+    color: var(--secondary-coor);
+
+}
+
+.cta-cv {
+    background-color: var(--secondary-coor);
+    color: white;
+}
+
+/*end-variables font*/
+/* #D8D8F6 Lavender 
+   #404040 Gray
+*/
