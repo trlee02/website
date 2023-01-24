@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Tristan Lee</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <section class="front-page">
@@ -14,7 +15,14 @@
                 <img src="assets/images/logosmall.png" alt="tristan lee">
                 <h3>Tristan Lee</h3>
             </div>
-            <div class="links">
+            <button class="menu-btn">
+                <svg viewBox="0 0 100 80" width="40" height="30">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+            </button>  
+            <div class="links">          
                 <a href="#">about</a>
                 <a href="#">portfolio</a>
                 <a href="#">resume</a>
@@ -22,8 +30,10 @@
         </nav>
         <div class="intro">
             <img class="headshot" src="assets/images/headshot.jpg" alt="tristan headshot">
-            <h2>Tristan Lee</h2>
-            <p>A UBC Engineering Physics student with dreams of becoming an astronaut.</p>
+            <div class="intro-text">
+                <h2>Tristan Lee</h2>
+                <p>A UBC Engineering Physics student with dreams of becoming an astronaut.</p>
+            </div>
         </div>
         <div class="about-me">
             <h2>About me</h2>
@@ -41,5 +51,6 @@
             
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

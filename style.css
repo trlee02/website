@@ -37,11 +37,66 @@ h2 {
 
 nav {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    color: var(--secondary-coor);
+    text-decoration: none;
+}
+
+nav .links a:hover {
+    font-weight: 500;
 }
 
 nav .links {
-    margin-top: 1rem;
+    min-width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5em;
+}
+
+nav .menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    margin-right: 3rem;
+}
+
+nav .menu-btn:hover {
+    cursor: pointer;
+}
+
+
+nav .links.open {
+    display: flex;
+    animation: slideIn 0.5s forwards;
+}
+
+nav.nav-active .links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  nav.nav-active .logo,
+  nav.nav-active .ctas {
+    display: none;
+  }
+  
+
+@media (max-width: 600px) {
+    nav .links {
+        display: none;
+    }
+    nav .menu-btn {
+        display: block;
+    }
 }
 
 .logo {
@@ -64,37 +119,60 @@ nav .links {
 .front-page,
 .projects {
     min-height: 100vh;
+    max-width: 1050px;
     background-color: #f1f1f1;
     color: rgba(0, 0, 0, 0.781);
-    max-width: 800px;
     margin: auto;
 }
 
-
 .intro {
     display: flex;
-    margin-top: 10vh;
+    align-items: center;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro img {
+        margin-bottom: 20px;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.intro img {
+    border: none;
+    height: 30rem;
+    border-radius: 5rem;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
 .intro h2 {
-    padding-left: 2%;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 125%;
+    padding: 1rem 1rem;
+    font-family: "Montserrat";
 }
 
 .intro p {
-    display: block;
+    font-weight: 500;
+    line-height: 125%;
+    padding: 1rem 1rem;
+    font-family: "Montserrat";
 }
 
-.intro .headshot {
-    flex-basis: 40%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    border: none;
-    border-radius: 5rem;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-    height: 30rem
-}
+
+/* .intro p {
+    margin-top: 1rem;
+    text-align: center;
+} */
+
 
 .ctas {
     margin-top: 2rem;
