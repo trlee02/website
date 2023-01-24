@@ -61,18 +61,39 @@ nav .links {
     font-family: "Montserrat";
 }
 
-.front-page {
+.front-page,
+.projects {
     min-height: 100vh;
     background-color: #f1f1f1;
-    color: rgba(0, 0, 0, 0.781)
+    color: rgba(0, 0, 0, 0.781);
+    max-width: 800px;
+    margin: auto;
 }
+
 
 .intro {
-    margin-top: 25vh;
+    display: flex;
+    margin-top: 10vh;
 }
 
-.headshot {
+.intro h2 {
+    padding-left: 2%;
+}
+
+.intro p {
+    display: block;
+}
+
+.intro .headshot {
+    flex-basis: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    height: 30rem
 }
 
 .ctas {
