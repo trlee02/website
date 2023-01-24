@@ -38,6 +38,7 @@ h2 {
 nav {
     display: flex;
     justify-content: space-between;
+    padding: 1em;
 }
 
 nav a {
@@ -57,44 +58,89 @@ nav .links {
     margin-right: 5em;
 }
 
-nav .menu-btn {
+nav .hamburger-menu {
     display: none;
-    border: none;
-    background: none;
-    margin-right: 3rem;
-}
-
-nav .menu-btn:hover {
+    z-index: 1;
+    margin-top: 1rem;
+    background-color: none;
+    height: 50px;
+    width: 50px;
+    position: relative;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
+.ham-bar {
+    width:80%;
+    height: 2.5px;
+    background-color: var(--secondary-coor);
 
-nav .links.open {
-    display: flex;
-    animation: slideIn 0.5s forwards;
-}
-
-nav.nav-active .links {
-    display: flex;
-    flex-direction: column;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+.bar-top {
+    top: 33%;
+}
+
+.bar-bottom {
+    top: 66%;
+}
+
+.hamburger-menu.active .ham-bar {
+    background-color: var(--main-color);
+}
+
+.hamburger-menu.active .bar-top {
+    transform:  translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburger-menu.active .bar-mid {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom {
+    transform:  translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+.off-screen-menu {
+    z-index: 1;
+    position: fixed;
     top: 0;
-    left: 0;
-    background: #fff;
-    width: 100%;
-    height: 100%;
-  }
-  nav.nav-active .logo,
-  nav.nav-active .ctas {
-    display: none;
-  }
-  
+    right: -75%;
+    background-color: var(--secondary-coor);
+    height: 100vh;
+    width: 75%;
+    transition: right 0.5s;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.hidden-links {
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.hidden-links a {
+    text-decoration: none;
+    padding: 0.5em;
+    color: var(--main-color);
+}
 
 @media (max-width: 600px) {
     nav .links {
         display: none;
     }
-    nav .menu-btn {
+    nav .hamburger-menu {
         display: block;
     }
 }
@@ -116,10 +162,9 @@ nav.nav-active .links {
     font-family: "Montserrat";
 }
 
-.front-page,
-.projects {
+.front-page {
     min-height: 100vh;
-    max-width: 1050px;
+    max-width: 1000px;
     background-color: #f1f1f1;
     color: rgba(0, 0, 0, 0.781);
     margin: auto;
@@ -147,7 +192,7 @@ nav.nav-active .links {
 .intro img {
     border: none;
     height: 30rem;
-    border-radius: 5rem;
+    border-radius: 2rem;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
 }
