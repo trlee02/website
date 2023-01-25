@@ -33,32 +33,24 @@
                 <a href="#resume">resume</a>
             </div>
         </nav>
-        <div class="intro">
+        <div id="about" class="intro">
             <img class="headshot" src="assets/images/headshot.jpg" alt="tristan headshot">
             <div class="intro-text">
                 <h2>Tristan Lee</h2>
-                <p>A UBC Engineering Physics student with dreams of becoming an astronaut.</p>
+                <p>A UBC Engineering Physics student with dreams of becoming an astronaut.
+                Can't get enough of the outdoors, let it be skiing, biking, or running, and as cliché as it sounds, I'm a lifetime learner, full of curiosity.</p>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam, facilis possimus quia praesentium eos facere reprehenderit nulla sint pariatur, illum mollitia maxime dolore enim dicta rerum sunt? Aperiam, ea.</p>
-                <a href="tristan.rene.lee@gmail.com">tristan.rene.lee@gmail.com</a>
-                <a href="https://www.linkedin.com/in/tristanrlee/">linkedin</a>
-
+                <p>You can reach me here:</p>
+                <a class="email" href="tristan.rene.lee@gmail.com">tristan.rene.lee@gmail.com</a>
+                <br>
+                <a class="linkedin" href="https://www.linkedin.com/in/tristanrlee/">linkedin</a>
             </div>
         </div>
-
-        <!-- <div id="about" class="about-me">
-            <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eaque facere nihil error est molestias fuga, fugit consequuntur illo doloribus doloremque. Quos repudiandae sequi laboriosam rem placeat necessitatibus officia dolore.</p>
-        </div> -->
-
-        <!-- <div class="ctas">
-            <button class="cta-proj">Projects</button>
-            <button class="cta-cv">Download CV</button>
-        </div> -->
-
+        
         <div id="projects" class="projects">
             <h2>Projects</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at laboriosam eius quod sit laudantium laborum hic quos eos atque est ratione, amet sed veritatis pariatur commodi reprehenderit cupiditate veniam.</p>
+            <hr class="rule">
+            <p>A handful of academic and personal projects that I have contributed to and developed. I believe that projects like these are invaluable experience as an engineering student and hope to keep adding more to this page.</p>
             <div class="robot">
                 <div class="images">
                     <img id="arm" src="./assets/images/arm.png" alt="robot arm">
@@ -72,37 +64,86 @@
                         <li>Mechanical prototyping</li>
                         <li>System integration</li>
                         <li>Team collaboration</li>
+                        <li>OnShape</li>
+                        <li>C++</li>
                     </ul> 
                     <h4>Description</h4>
-                    <p>Over the course of the summer of 2022 I worked in a group of 4 to design, build, and program a robot from scratch. This robot would then compete in a competition to acquire plastic idols along the course. The course consisted of 3 sections, line following, IR tracking, and ziplines. Almost every part of the robot was manufactured in the lab using a variety of tools such as a laser cutter, lathe, milling machine and 3D printer. The robot was controlled using a STM32 Bluepill, along with several other circuits that constructed by my teammates and I. Several circuits required extensive testing and troubleshooting using an oscilloscope to identify faulty signals. Upon completing the necassary circuits, I wrote firmware used to detect idols along the course using sonar sensing, and control linear robot arm and claws to reach and grab the idol. Integration of the subsystems, such as the robot arm, was by far the most challenging part of the competition, consuming full days of work to test and implement simple features. Nonetheless, our team placed fourth in the competition, despite being down a team member for more than half of the build time. </p>
+                    <p>Over the course of the summer of 2022 I worked in a group of 4 to design, build, and program a robot from scratch. The objective of the robot was to acquire plastic idols along a competition course. The course consisted of main 3 sections, line following, IR tracking, and ziplines. Almost every part of the robot was manufactured in the lab using a variety of tools such as a laser cutter, lathe, milling machine and 3D printer. The robot was controlled using a STM32 Bluepill, along with several other circuits that were constructed by my teammates and I. Several circuits required extensive testing and troubleshooting, where an oscilloscope to identify faulty signals. Upon completing the necassary circuits, I wrote firmware in C++ used to detect idols along the course using sonar sensors, which would then control linear robot arm and claws to reach and grab the idol. Integration of the subsystems, such as acquiring idols while driving, was by far the most challenging and time consuming part of the competition. Nonetheless, our team placed fourth, despite being down a team member for more than half of the build time. </p>
+                    <br>
+                    <p>More photos can be viewed <a href="https://photos.app.goo.gl/D7AKB6BH1TBeNhmeA">here</a>.</p>
                 </div>
             </div>
+
             <div class="ml">
                 <div class="images">
                     <img id="comp" src="./assets/images/comp.gif" alt="robot arm">
                     <img id="contour" src="./assets/images/contour.png" alt="robot arm">
                 </div>
                 <div class="text">
+                    <h3>Engineering Physics machine learning competition</h3>
+                    
                     <h4>Key Concepts and Tools Used</h4>
                     <ul>
-                        <li>ROS</li>
-                        <li>Linux</li>
+                        <li>Robot Operating System (ROS)</li>
+                        <li>OpenCV</li>
                         <li>Immitation learning</li>
                         <li>Data collection</li>
+                        <li>Linux</li>
+                        <li>Partner collaboration</li>
                     </ul> 
-                    <h4>Engineering Physics machine learning competition</h4>
-                    <p>This project was created for the purpose of developing skills in machine learning and computer vision, using a simulated environment in Gazebo. The robot, seen in Fig. 5 drove around the simulated course while viewing license plates on the cars scattered on the edges of the path. Each time the robot saw a license plate, it published the plate and parking spot number to a script that would keep score for each license plate seen. The robot was controlled using an imitation learning model which published ROS command velocities to the robot from a Python script running OpenCV image processing on the robots camera. The neural net was trained from data collected by my teammate and I, driving manually around the course. Over 25,000 images were collected, along with data points for each command velocity seen during it’s respective image. Another Python script running OpenCV processing on the camera, was attempting to identify contours that resembled the front of the cars. Whenever this occurred, two other imitation models were used to read the license plate and parking spot number. This whole project file structure was developed in Linux and managed using Git. </p>
+                    <h4>Description</h4>
+                    <p>This project was created for the purpose of developing skills in machine learning and computer vision, using a simulated environment in Gazebo. The robot seen moving around the road, drove around a simulated course while viewing license plates on the cars scattered on the edges of its path. The robot was controlled using an imitation learning model which published ROS command velocities to the robot from a Python script running OpenCV image processing on the robots front camera. The neural net was trained from data that was collected by my teammate and I driving manually around the course. Over 25,000 images were collected, along with data points for each command velocity seen during its respective frame. Another Python script running OpenCV processing on the camera, was attempting to identify contours that resembled the front of the cars. Whenever this occurred, two other imitation models were used to read the license plate and parking spot number. A data pipeline was created using Python such that thousands of images could be captured in different lighting perspectives and orientations, to collect the data used on the license plate identification. The projects directory structure was developed in Linux and managed by my teammate and I using Git. </p>
+                </div>
+            </div>
+
+            <div class="solidworks">
+                <div class="images">
+                    <img id="comp" src="./assets/images/engine.png" alt="solidworks engine">
+                    <img id="contour" src="./assets/images/delorean.png" alt="solidworks delorean">
+                </div>
+                <div class="text">
+                    <h3>SolidWorks DeLorean</h3>
+                    
+                    <h4>Key Concepts and Tools Used</h4>
+                    <ul>
+                        <li>SolidWorks</li>
+                        <li>Team collaboration</li>
+                    </ul> 
+                    <h4>Description</h4>
+                    <p>During my first year at UBC, I worked in a group of six to design a ‘Back to the Future’ DeLorean using Solidworks. I assembled over 100 parts to create the V6 engine that resided at the back of the DeLorean. This engine had a fully functioning crank and camshaft assembly, with 6 individual pistons and 12 rocker arms to open fuel and exhaust valves in the cylinder heads seen in purple. I worked with my group to complete the Delorean by assembling each group members sub-assemblies. This project enabled my to not only strengthen my SolidWorks skills but also develop my abilities to coordinate and organize with a team to produce a large scale project.  </p>
+                </div>
+            </div>
+
+            <div class="tesla-coil">
+                <div class="images">
+                    <img id="tesla-coil" src="./assets/images/tesla-coil.png" alt="tesla coil">
+                    <img id="contour" src="./assets/images/arc2.png" alt="arc">
+                </div>
+                <div class="text">
+                    <h3>SolidWorks DeLorean</h3>
+                    
+                    <h4>Key Concepts and Tools Used</h4>
+                    <ul>
+                        <li>SolidWorks</li>
+                        <li>Team collaboration</li>
+                    </ul> 
+                    <h4>Description</h4>
+                    <p>During my first year at UBC, I worked in a group of six to design a ‘Back to the Future’ DeLorean using Solidworks. I assembled over 100 parts to create the V6 engine that resided at the back of the DeLorean. This engine had a fully functioning crank and camshaft assembly, with 6 individual pistons and 12 rocker arms to open fuel and exhaust valves in the cylinder heads seen in purple. I worked with my group to complete the Delorean by assembling each group members sub-assemblies. This project enabled my to not only strengthen my SolidWorks skills but also develop my abilities to coordinate and organize with a team to produce a large scale project.  </p>
                 </div>
             </div>
         </div>
             
-        <div class="resume">
+        <div id="resume" class="resume">
             <h2>Resume</h2>
+            <hr class="rule">
             <iframe src="./assets/resume.pdf" width="100%" height="700px">
             </iframe>
         </div>
     </section>
 
+    <footer>
+        <p>&copy; Copyright 2023 &nbsp;  &#9885; &nbsp; Tristan Lee</p>
+    </footer>
     
     <script src="script.js"></script>
 </body>
