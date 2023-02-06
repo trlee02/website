@@ -71,7 +71,7 @@
                         <li>C++</li>
                     </ul> 
                     <h4>Description</h4>
-                    <p>Over the course of the summer of 2022 I worked in a group of 4 to design, build, and program a robot from scratch. The objective of the robot was to acquire plastic idols along a competition course. The course consisted of main 3 sections, line following, IR tracking, and ziplines. Almost every part of the robot was manufactured in the lab using a variety of tools such as a laser cutter, lathe, milling machine and 3D printer. The robot was controlled using a STM32 Bluepill, along with several other circuits that were constructed by my teammates and I. Several circuits required extensive testing and troubleshooting, where an oscilloscope to identify faulty signals. Upon completing the necassary circuits, I wrote firmware in C++ used to detect idols along the course using sonar sensors, which would then control linear robot arm and claws to reach and grab the idol. Integration of the subsystems, such as acquiring idols while driving, was by far the most challenging and time consuming part of the competition. Nonetheless, our team placed fourth, despite being down a team member for more than half of the build time. </p>
+                    <p>Over the course of the summer of 2022 I worked in a group of 4 to design, build, and program a robot from scratch. The objective of the robot was to acquire plastic idols along a competition course. The course consisted of main 3 sections, line following, IR tracking, and ziplines. Almost every part of the robot was manufactured in the lab using a variety of tools such as a laser cutter, lathe, milling machine and 3D printer. The robot was controlled using a STM32 Bluepill, along with several other circuits that were constructed by my teammates and I. These circuits required extensive testing and troubleshooting, where an oscilloscope was used to identify faulty signals. Upon completing the necassary circuits, I wrote firmware in C++ used to detect idols along the course using sonar sensors, which would then control linear robot arm and claws to reach and grab the idol. Integration of the subsystems, such as acquiring idols while driving, was by far the most challenging and time consuming part of the competition. Nonetheless, our team placed fourth, despite being down a team member for more than half of the build time. </p>
                     <br>
                     <p>More photos can be viewed <a href="https://photos.app.goo.gl/D7AKB6BH1TBeNhmeA">here</a>.</p>
                 </div>
@@ -95,7 +95,9 @@
                         <li>Partner collaboration</li>
                     </ul> 
                     <h4>Description</h4>
-                    <p>This project was created for the purpose of developing skills in machine learning and computer vision, using a simulated environment in Gazebo. The robot seen moving around the road, drove around a simulated course while viewing license plates on the cars scattered on the edges of its path. The robot was controlled using an imitation learning model which published ROS command velocities to the robot from a Python script running OpenCV image processing on the robots front camera. The neural net was trained from data that was collected by my teammate and I driving manually around the course. Over 25,000 images were collected, along with data points for each command velocity seen during its respective frame. Another Python script running OpenCV processing on the camera, was attempting to identify contours that resembled the front of the cars. Whenever this occurred, two other imitation models were used to read the license plate and parking spot number. A data pipeline was created using Python such that thousands of images could be captured in different lighting perspectives and orientations, to collect the data used on the license plate identification. The projects directory structure was developed in Linux and managed by my teammate and I using Git. </p>
+                    <p>This project was created for the purpose of developing skills in machine learning and computer vision, using a simulated environment in Gazebo. The robot seen moving around the road, drove through a simulated course while viewing license plates on the cars scattered on the edges of its path. The robot was controlled using an imitation learning model which published ROS command velocities to the robot from a Python script running OpenCV image processing on the robots front camera. The neural net was trained from data that was collected by my teammate and I driving manually around the course. Over 25,000 images were collected, along with data points for each command velocity seen during its respective frame. Another Python script running OpenCV processing on the camera, was attempting to identify contours that resembled the front of the cars. Whenever this occurred, two other imitation models were used to read the license plate and parking spot number. A data pipeline was created using Python such that thousands of images could be captured in different lighting perspectives and orientations, to collect the data used for license plate identification. The projects directory structure was developed in Linux and managed by my teammate and I using Git. </p>
+                    <br>
+                    <p>View the source code <a href="https://github.com/trlee02/license-plate-collector">here</a>.</p>
                 </div>
             </div>
 
@@ -113,7 +115,7 @@
                         <li>Team collaboration</li>
                     </ul> 
                     <h4>Description</h4>
-                    <p>During my first year at UBC, I worked in a group of six to design a ‘Back to the Future’ DeLorean using Solidworks. I assembled over 100 parts to create the V6 engine that resided at the back of the DeLorean. This engine had a fully functioning crank and camshaft assembly, with 6 individual pistons and 12 rocker arms to open fuel and exhaust valves in the cylinder heads seen in purple. I worked with my group to complete the Delorean by assembling each group members sub-assemblies. This project enabled my to not only strengthen my SolidWorks skills but also develop my abilities to coordinate and organize with a team to produce a large scale project.  </p>
+                    <p>Over my first year at UBC, I worked in a group of six to design a ‘Back to the Future’ DeLorean using Solidworks. I assembled over 100 parts to create the V6 engine that resided at the back of the DeLorean. This engine had a fully functioning crank and camshaft assembly, with 6 individual pistons and 12 rocker arms to open fuel and exhaust valves in the cylinder heads seen in purple. I worked with my group to complete the Delorean by assembling each group members sub-assemblies. This project enabled me to not only strengthen my SolidWorks skills but also develop my abilities to coordinate and organize with a team to produce a large scale project.  </p>
                 </div>
             </div>
 
@@ -123,22 +125,22 @@
                     <img id="contour" src="./assets/images/arc2.png" alt="arc">
                 </div>
                 <div class="text">
-                    <h3>SolidWorks DeLorean</h3>
+                    <h3>Mini Tesla Coil</h3>
                     
                     <h4>Key Concepts and Tools Used</h4>
                     <ul>
-                        <li>SolidWorks</li>
-                        <li>Team collaboration</li>
+                        <li>Soldering</li>
+                        <li>3D printing</li>
                     </ul> 
                     <h4>Description</h4>
-                    <p>During my first year at UBC, I worked in a group of six to design a ‘Back to the Future’ DeLorean using Solidworks. I assembled over 100 parts to create the V6 engine that resided at the back of the DeLorean. This engine had a fully functioning crank and camshaft assembly, with 6 individual pistons and 12 rocker arms to open fuel and exhaust valves in the cylinder heads seen in purple. I worked with my group to complete the Delorean by assembling each group members sub-assemblies. This project enabled my to not only strengthen my SolidWorks skills but also develop my abilities to coordinate and organize with a team to produce a large scale project.  </p>
+                    <p>This is a miniature tesla coil made from an electric fly swatter. The primary circuit on the base of the coil takes advantage of the electric fly swatter Joule thief circuit to charge a capacitor bank at the base of the coil. When the capacitors reach a high charge, an arc forms across the spark gap, quickly releasing the potential on the capacitors. This quick change in potential in the primary circuit induces a very high voltage in the secondary (red coil) circuit, due to Faraday's law. The secondary coil can produce around 10kV, seen by the 1cm arc in the lower image. The extreme voltage in the secondary coil is enough to ionize the surrounding air molecules, to create the lightning like arc famously produced by Tesla coils.</p>
                 </div>
             </div>
 
             <div id="about" class="about">
                 <h2>About</h2>
                 <hr>
-                <p>This website itself is a personal project. In highschool I took a couple online courses in web development. When making my resume to apply for jobs this year, my good friend Reese inspired me to make this website for my projects. So I brushed off the old tools and got to work. I'd recently heard from my classmates that I should try using ChatGPT to write my code so I can stay ahead of the technology curve, but that only worked for small portions. Old reliable, google everything, did the trick in the end. Feel free to shoot me an email if you have any suggestions.</p>
+                <p>This website itself is a personal project. In highschool I took a couple online courses in web development. When making my resume to apply for jobs this year, my good friend Reese inspired me to make this website for my projects. So I brushed off the old tools and got to work. I'd recently heard from my classmates that I should try using ChatGPT to write my code so I can stay ahead of the technology curve, but that only worked for small portions of the website. Old reliable, google everything, did the trick in the end. Feel free to shoot me an email if you have any suggestions.</p>
             </div>
         </div>
             
